@@ -1,19 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>My Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul class="nav-list">
+            <li><a href="">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Work History</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="intro">
+      <div class="container">
+        <img class="user-pic" src="img/man-in-office.jpeg" alt="user" />
+        <h1 class="name">Andrew Jones - Web Dev</h1>
+        <p>Summary</p>
+        <hr />
+        <p>
+          Meticulous web developer with over 5 years of front end experience and
+          passion for creating beauftiful responsive website. Implemented new
+          responsive website approach which increased mobile traffic by 40%.
+        </p>
+        <button>Lets Team Up</button>
+      </div>
+    </section>
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="row">
+          <div class="column">
+            <img src="img/HTML5LOGO.png" alt="HTML5" />
+            <p>HTML</p>
+          </div>
+          <div class="column">
+            <img src="img/csslogo.png" alt="CSS" />
+            <p>CSS</p>
+          </div>
+          <div class="column">
+            <img src="img/jslogo.png" alt="Javascript" />
+            <p>Javascript</p>
+          </div>
+          <div class="column">
+            <img src="img/react-logo.png" alt="reactJS" />
+            <p>ReactJS</p>
+          </div>
+          <div class="column">
+            <img src="img/node-logo.jpg" alt="Javascript" />
+            <p>NodeJS</p>
+          </div>
+          <div class="column">
+            <img src="img/expressjs-logov2.png" alt="ExpressJS" />
+            <p>ExpressJS</p>
+          </div>
+          <div class="column">
+            <img src="img/mongodb-logo.png" alt="Javascript" />
+            <p>MongoDB</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="work" class="work-history-section">
+      <div class="container">
+        <h2>Work History</h2>
+        <div class="row">
+          <div class="column">
+            <div class="work-info">
+              <div class="position">
+                <h3>Senior Front End Developer</h3>
+                <div class="company-info">
+                  <p>Netflix</p>
+                  <p>Los Angelos</p>
+                </div>
+              </div>
+              <div class="work-history work-history-1">
+                <p class="employment-type">full Time</p>
+                <p class="employment-date">April 12 2019</p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="work-info">
+              <div class="position">
+                <h3>Senior Front End Developer</h3>
+                <div class="company-info">
+                  <p>Apple Inc</p>
+                  <p>Los Angelos</p>
+                </div>
+              </div>
+              <div class="work-history">
+                <p class="employment-type">full Time</p>
+                <p class="employment-date">July 09 2018 - April 12 2019</p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="work-info">
+              <div class="position">
+                <h3>Front End Developer</h3>
+                <div class="company-info">
+                  <p>Microsoft</p>
+                  <p>Los Angelos</p>
+                </div>
+              </div>
+              <div class="work-history">
+                <p class="employment-type">full Time</p>
+                <p class="employment-date">April 02 2013 - July 09 2018</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="container">
+        <form>
+          <h2>Contact Me</h2>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <textarea name="name" rows="8" cols="80"></textarea>
+          <button>send</button>
+        </form>
+      </div>
+    </section>
+  </body>
 </html>

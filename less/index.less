@@ -1,59 +1,368 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+// Google Fonts for stretch goal
+
+@import url("https://fonts.googleapis.com/css?family=Cantata+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Imprima&display=swap");
+
+// 1 Variables
+@primary: #3b94df;
+
+// 2 Mixins
+.flex-layout {
+  display: flex;
+}
+
+.center-text {
+  text-align: center;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+body {
+  font-family: "Imprima", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cantata One", serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+header > .container {
+  .flex-layout();
+  nav {
+    margin: 20px 20px 20px auto;
+    .nav-list {
+      .flex-layout();
+    }
+  }
+}
+
+.nav-list {
+  li {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+.intro {
+  color: white;
+  .name {
+    margin: 10px 0;
+  }
+
+  .user-pic {
+    width: 300px;
+    height: 300px;
+  }
+
+  .container {
+    background-color: @primary;
+    padding: 30px 20px;
+  }
+  hr {
+    border: 0.3px solid lightgray;
+  }
+  button {
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+}
+
+.skills {
+  h2 {
+    margin-left: 10px;
+    color: #3253d2;
+  }
+  .container {
+    padding: 10px;
+  }
+  .row {
+    .flex-layout();
+    flex-wrap: wrap;
+    .column {
+      width: 24%;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      //a nested-at rules at 500px
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+      .center-text();
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.work-history-section {
+  margin-bottom: 10px;
+  h2 {
+    margin-left: 8px;
+    color: #3253d2;
+  }
+  .container {
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+  .row {
+    .flex-layout();
+    flex-direction: column;
+    .column {
+      margin-top: 20px;
+      border-bottom: 0.3px solid gray;
+      .work-info {
+        .flex-layout();
+        justify-content: space-between;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.employment-type {
+  background-color: #d7ffe0;
+  padding: 10px;
+  border-radius: 12px;
+  width: 120px;
+  text-transform: uppercase;
+  .center-text();
+  color: #3253d2;
+  font-weight: bold;
+}
+
+.employment-date {
+  color: #8f98b4;
+}
+
+.work-history-1 p {
+  margin-right: 62px;
+}
+
+.work-info h3 {
+  color: #3b94df;
+}
+
+.work-history p {
+  margin-bottom: 8px;
+}
+
+.company-info {
+  margin-top: 10px;
+  .flex-layout();
+  p {
+    margin-right: 15px;
+    color: #8f98b4;
+  }
+}
+
+.contact {
+  .container {
+    padding: 20px;
+    .flex-layout();
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    form {
+      border: 1px solid white;
+      padding: 10px;
+      background-color: white;
+      .flex-layout();
+      flex-direction: column;
+      width: 500px;
+      h2 {
+        color: #3253d2;
+        margin-bottom: 10px;
+        .center-text();
+      }
+      input {
+        height: 40px;
+        margin-bottom: 15px;
+        padding-left: 10px;
+        font-size: 14px;
+      }
+      button {
+        width: 120px;
+        height: 40px;
+        align-self: center;
+        margin: 10px 0;
+        background-color: @primary;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+}
