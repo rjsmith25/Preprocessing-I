@@ -1,1 +1,342 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Cantata One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Cantata One'), local('CantataOne-Regular'), url(https://fonts.gstatic.com/s/cantataone/v9/PlI5Fl60Nb5obNzNe2jslWxDvcQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Imprima';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Imprima'), local('Imprima-Regular'), url(https://fonts.gstatic.com/s/imprima/v8/VEMxRoN7sY3yuy-7yoKNzA.ttf) format('truetype');
+}
+.flex-layout {
+  display: flex;
+}
+.center-text {
+  text-align: center;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Imprima", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cantata One", serif;
+}
+html,
+body {
+  height: 100%;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+header > .container {
+  display: flex;
+}
+header > .container nav {
+  margin: 20px 20px 20px auto;
+}
+header > .container nav .nav-list {
+  display: flex;
+}
+.nav-list li {
+  margin-right: 20px;
+}
+.nav-list li:last-child {
+  margin-right: 0;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+}
+.intro {
+  color: white;
+}
+.intro .name {
+  margin: 10px 0;
+}
+.intro .user-pic {
+  width: 300px;
+  height: 300px;
+}
+.intro .container {
+  background-color: #3b94df;
+  padding: 30px 20px;
+}
+.intro hr {
+  border: 0.3px solid lightgray;
+}
+.intro button {
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: gray;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.skills h2 {
+  margin-left: 10px;
+  color: #3253d2;
+}
+.skills .container {
+  padding: 10px;
+}
+.skills .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills .row .column {
+  width: 24%;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .skills .row .column {
+    width: 100%;
+  }
+}
+.skills .row .column img {
+  width: 100%;
+}
+.work-history-section {
+  margin-bottom: 10px;
+}
+.work-history-section h2 {
+  margin-left: 8px;
+  color: #3253d2;
+}
+.work-history-section .container {
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+.work-history-section .row {
+  display: flex;
+  flex-direction: column;
+}
+.work-history-section .row .column {
+  margin-top: 20px;
+  border-bottom: 0.3px solid gray;
+}
+.work-history-section .row .column .work-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.employment-type {
+  background-color: #d7ffe0;
+  padding: 10px;
+  border-radius: 12px;
+  width: 120px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #3253d2;
+  font-weight: bold;
+}
+.employment-date {
+  color: #8f98b4;
+}
+.work-history-1 p {
+  margin-right: 62px;
+}
+.work-info h3 {
+  color: #3b94df;
+}
+.work-history p {
+  margin-bottom: 8px;
+}
+.company-info {
+  margin-top: 10px;
+  display: flex;
+}
+.company-info p {
+  margin-right: 15px;
+  color: #8f98b4;
+}
+.contact .container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+.contact .container form {
+  border: 1px solid white;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.contact .container form h2 {
+  color: #3253d2;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.contact .container form input {
+  height: 40px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.contact .container form button {
+  width: 120px;
+  height: 40px;
+  align-self: center;
+  margin: 10px 0;
+  background-color: #3b94df;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
